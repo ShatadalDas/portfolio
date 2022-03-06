@@ -87,8 +87,8 @@ p {
   font-size: 22px;
 }
 
-@media (max-width: 1230px) {
+/* @media (max-width: 1230px) {
   .container {
-    height: auto;
+    height: 100vh;
   }
-}
+} */
