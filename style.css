@@ -17,6 +17,7 @@ a {
   justify-content: center;
   align-items: center;
   background: rgb(13, 31, 75);
+  /* background: #3D3160; */
   flex-wrap: wrap;
   overflow: visible;
 }
@@ -37,6 +38,8 @@ a {
   transition: all 250ms ease-in-out;
   text-align: center;
   overflow: hidden;
+  box-shadow: 2px 2px 5px white,
+  -2px -2px 5px white;
 }
 h1 {
   color: #fff;
@@ -84,9 +87,3 @@ p {
   display: inline-block;
   font-size: 22px;
 }
-
-/* @media (max-width: 1230px) {
-  .container {
-    height: 100vh;
-  }
-} */
