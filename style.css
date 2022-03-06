@@ -17,11 +17,9 @@ a {
   justify-content: center;
   align-items: center;
   background: rgb(13, 31, 75);
-  /* background: #3D3160; */
   flex-wrap: wrap;
   overflow: visible;
 }
-
 .card1,
 .card2,
 .card3 {
@@ -38,8 +36,8 @@ a {
   transition: all 250ms ease-in-out;
   text-align: center;
   overflow: hidden;
-  box-shadow: 2px 2px 5px white,
-  -2px -2px 5px white;
+  box-shadow: 1px 1px 5px white,
+  -1px -1px 5px white;
 }
 h1 {
   color: #fff;
