@@ -1,12 +1,10 @@
 ::-webkit-scrollbar {
   display: none;
 }
-::selection {
-  user-select: none;
-}
 * {
   margin: 0;
   font-family: sans-serif;
+  user-select: none;
 }
 a {
   text-decoration: none !important;
