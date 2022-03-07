@@ -6,36 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="card1">
+    <div class="mode">
+      <svg
+        id="dark"
+        onClick="toggle_theme()"
+        xmlns="http://www.w3.org/2000/svg"
+        enable-background="new 0 0 20 20"
+        height="36px"
+        viewBox="0 0 20 20"
+        width="36px"
+        fill="#000000"
+      >
+        <rect fill="none" height="20" width="20" />
+        <path
+          d="M10,3c-3.87,0-7,3.13-7,7s3.13,7,7,7s7-3.13,7-7c0-0.36-0.03-0.72-0.08-1.06C16.16,10,14.91,10.7,13.5,10.7 c-2.32,0-4.2-1.88-4.2-4.2c0-1.41,0.7-2.66,1.76-3.42C10.72,3.03,10.36,3,10,3L10,3z"
+        />
+      </svg>
+
+      <svg
+        id="light"
+        onClick="toggle_theme()"
+        xmlns="http://www.w3.org/2000/svg"
+        enable-background="new 0 0 20 20"
+        height="36px"
+        viewBox="0 0 20 20"
+        width="36px"
+        fill="#FFFFFF"
+      >
+        <rect fill="none" height="20" width="20" />
+        <path
+          d="M10,6c2.21,0,4,1.79,4,4s-1.79,4-4,4s-4-1.79-4-4S7.79,6,10,6L10,6z M3.75,10.75c0.41,0,0.75-0.34,0.75-0.75 c0-0.41-0.34-0.75-0.75-0.75h-2C1.34,9.25,1,9.59,1,10s0.34,0.75,0.75,0.75H3.75z M18.25,10.75c0.41,0,0.75-0.34,0.75-0.75 c0-0.41-0.34-0.75-0.75-0.75h-2c-0.41,0-0.75,0.34-0.75,0.75s0.34,0.75,0.75,0.75H18.25z M9.25,3.75C9.25,4.16,9.59,4.5,10,4.5 c0.41,0,0.75-0.34,0.75-0.75v-2C10.75,1.34,10.41,1,10,1S9.25,1.34,9.25,1.75V3.75z M13.89,5.05c-0.29,0.29-0.29,0.77,0,1.06 s0.77,0.29,1.06,0l1.06-1.06c0.29-0.29,0.29-0.77,0-1.06c-0.29-0.29-0.77-0.29-1.06,0L13.89,5.05z M3.99,14.95 c-0.29,0.29-0.29,0.77,0,1.06s0.77,0.29,1.06,0l1.06-1.06c0.29-0.29,0.29-0.77,0-1.06c-0.29-0.29-0.77-0.29-1.06,0L3.99,14.95z M5.05,6.11c0.29,0.29,0.77,0.29,1.06,0s0.29-0.77,0-1.06L5.05,3.99c-0.29-0.29-0.77-0.29-1.06,0s-0.29,0.77,0,1.06L5.05,6.11z M14.95,16.01c0.29,0.29,0.77,0.29,1.06,0s0.29-0.77,0-1.06l-1.06-1.06c-0.29-0.29-0.77-0.29-1.06,0c-0.29,0.29-0.29,0.77,0,1.06 L14.95,16.01z M9.25,18.25C9.25,18.66,9.59,19,10,19c0.41,0,0.75-0.34,0.75-0.75v-2c0-0.41-0.34-0.75-0.75-0.75 s-0.75,0.34-0.75,0.75V18.25z"
+        />
+      </svg>
+    </div>
+    <div id="content" class="content-dark">
+      <div id="c1" class="card">
         <h1>Skills</h1>
         <p>
-          Hello,<br />My name is Shatadal Das,<br /><br />
+          <span>Hello,</span><br /><span class="intro">My name is Shatadal Das</span><br /><br />
           I'm currently practicing C++.<br />
           I know HTML, CSS and JS.<br />
           I'm fluent in English, Hindi and Bengali.
         </p>
       </div>
-      <div class="card2">
+      <div id="c2" class="card">
         <h1>Education</h1>
         <p>
-          Hello,<br />My name is Shatadal Das,<br /><br />
+          <span>Hello,</span><br /><span class="intro">My name is Shatadal Das</span><br /><br />
           I'm currently in class 12 Science Stream at
-          <a href="https://en.wikipedia.org/wiki/Kokrajhar_Government_College">Kokrajhar Govt. College</a>, Kokrajhar, AS, IN
+          <a href="https://en.wikipedia.org/wiki/Kokrajhar_Government_College"
+            >Kokrajhar Govt. College</a
+          >, Kokrajhar, AS, IN
         </p>
       </div>
-      <div class="card3">
+      <div id="c3" class="card">
         <h1>Experiences</h1>
         <p>
-          Hello,<br />My name is Shatadal Das,<br /><br />
+          <span>Hello,</span><br /><span class="intro">My name is Shatadal Das</span><br /><br />
           I've been programming in C++ for 2 years now.<br />And doing Frontend
           Development for 1.5 Years now.
         </p>
       </div>
     </div>
+    <script>
+      function toggle_theme() {
+        var d = document.getElementById("dark");
+        var l = document.getElementById("light");
+        var card1 = document.getElementById("c1");
+        var card2 = document.getElementById("c2");
+        var card3 = document.getElementById("c3");
+        var cont = document.getElementById("content");
+
+        if(card1.classList.contains('card') && cont.classList.contains('content-dark'))
+        {
+          card1.classList.remove("card");
+          card1.classList.add("clight");
+          card2.classList.remove("card");
+          card2.classList.add("clight");
+          card3.classList.remove("card");
+          card3.classList.add("clight");
+          cont.classList.remove("content-dark");
+          cont.classList.add("content-light");
+          d.style.display = "inline";
+          l.style.display = "none";
+        }
+        else {
+          card1.classList.remove("clight");
+          card1.classList.add("card");
+          card2.classList.remove("clight");
+          card2.classList.add("card");
+          card3.classList.remove("clight");
+          card3.classList.add("card");
+          cont.classList.remove("content-light");
+          cont.classList.add("content-dark");
+          l.style.display = "inline";
+          d.style.display = "none";
+          }
+      }
+    </script>
   </body>
 </html>
